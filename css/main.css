@@ -820,6 +820,10 @@ template {
     height: 1034px;
     z-index: 1;
     object-fit: contain; }
+    .page-content__background.vis {
+      display: block; }
+    .page-content__background.new-preview {
+      left: 0; }
 
 .content-content {
   z-index: 2; }
@@ -853,9 +857,6 @@ template {
       width: 110px;
       height: 114px;
       filter: blur(10px); }
-
-.vis {
-  display: block; }
 
 .content-content__subtitle {
   max-width: fit-content;

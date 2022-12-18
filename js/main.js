@@ -146,6 +146,7 @@ function loadingPreview() {
   if (!file) return;
   var loadingImage = function loadingImage() {
     preview.src = URL.createObjectURL(file);
+    preview.classList.add('new-preview');
   };
   loadingImage();
 }
