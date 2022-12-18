@@ -53,6 +53,12 @@
     height: 1034px;
     z-index: 1;
     object-fit: contain;
+    &.vis {
+      display: block;
+    }
+    &.new-preview {
+      left: 0;
+    }
   }
 }
 
@@ -98,10 +104,6 @@
       filter: blur(10px);
     }
   }
-}
-
-.vis {
-  display: block;
 }
 
 .content-content {
