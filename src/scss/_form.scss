@@ -1,0 +1,255 @@
+.page-form {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--color-12);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 285px;
+    background-image: url("../img/form/smoke.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 285px 15px 80px 15px !important;
+  }
+  &__content {
+    background-color: var(--color-1);
+    padding: 70px;
+    border-radius: 8px;
+  }
+  &__parallax-items {
+    position: absolute;
+    inset: 0 0 0 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.parallax-items {
+  overflow: hidden;
+  > * {
+    z-index: -1;
+  }
+  &__berry {
+    position: absolute;
+    background-image: url("../img/berry.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &.f-2 {
+      bottom: -10px;
+      left: 90px;
+      width: 167px;
+      height: 171px;
+    }
+    &.f-4 {
+      right: 120px;
+      top: 180px;
+      width: 152px;
+      height: 155px;
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+    background-image: url("../img/leaf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &.f-1 {
+      top: 230px;
+      left: 160px;
+      width: 106px;
+      height: 111px;
+      filter: blur(5px);
+    }
+    &.f-3 {
+      right: 120px;
+      bottom: -20px;
+      width: 146px;
+      height: 153px;
+      filter: blur(3px);
+    }
+  }
+} 
+
+.form-content {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  &__description,
+  &__input {
+    margin: 0 auto;
+  }
+  &__input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:25px;
+  }
+}
+
+.form-description {
+  > *:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &__title,
+  &__text {
+    color: var(--color-3);
+    text-align: center;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 47.88px;
+    margin: 0;
+  }
+  &__text {
+    font-size: 21px;
+    line-height: 30.03px;
+    letter-spacing: 1px;
+  }
+}
+
+.form-input {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.box-inputs {
+  display: flex;
+  gap: 20px;
+  &__wrapper {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & .text-error {
+      display: block;
+      color: var(--color-19);
+    }
+  }
+  &__label {
+    position: relative;
+    padding: 30px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-2);
+    cursor: pointer;
+    &.error {
+      border: 1px solid var(--color-19);
+      box-shadow: 0 0 5px var(--color-19);
+    }
+    & input {
+      border: none;
+      outline: none;
+      background: none;
+      color: var(--color-10);
+      font-size: 14px;
+      line-height: 24px;
+      &::placeholder {
+        color: var(--color-10);
+      }
+    }
+  }
+  &__submit {
+    padding: 30px;
+    flex: 0 1 50%;
+    background-color: var(--color-4);
+    border: none;
+    border-radius: 8px;
+    transition: background-color .3s;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-6);
+    }
+    & span {
+      color: var(--color-3);
+      font-size: 18px;
+      line-height: 27.36px;
+      text-align: center;
+    }
+  }
+}
+
+.fa-phone {
+  font-size: 14px;
+  color:var(--color-11);
+}
+
+.form-input-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  &.error {
+    & input {
+      box-shadow: 0 0 5px var(--color-19);
+    }
+  }
+  > * {
+    cursor: pointer;
+  }
+  & span {
+    font-size: 11px;
+    color: var(--color-10);
+    line-height: 14.3px;
+  }
+}
+
+@media (max-width: 769px) {
+  .box-inputs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 541px) {
+  .page-form {
+    &__container {
+      padding: 120px 15px 15px 15px !important;
+    }
+    &__content {
+      padding: 30px;
+    }
+  }
+  .form-description {
+    &__title {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .page-form__content {
+    padding: 20px;
+  }
+  .form-description {
+    &__title {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}

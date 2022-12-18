@@ -1,0 +1,170 @@
+.page-catallog {
+  background-color: var(--color-1);
+  position: relative;
+  &__container {
+    padding: 15px !important;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__parallax-items {
+    position: absolute;
+    inset: 0 0 0 0;
+    pointer-events: none;
+  }
+}
+
+.catallog-content {
+  &__title {
+    font-size: 48px;
+    line-height: 60px;
+    color: var(--color-3);
+    margin: auto;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.catallog-item {
+  & img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 45px;
+  }
+  &__title {
+    color: var(--color-3);
+    font-size: 24px;
+    line-height: 34.32px;
+    margin-bottom: 12px;
+  }
+  &__description {
+    color: var(--color-3);
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    max-width: 240px;
+  }
+  &__price {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 14px;
+    color: var(--color-5);
+    display: block;
+  }
+  &__button {
+    display: block;
+    text-align: center;
+    max-width: 160px;
+    font-size: 18px;
+    padding: 20px 40px;
+    background-color: var(--color-4);
+    color: var(--color-3);
+    line-height: 27.36px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color .3s;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-6);
+    }
+  }
+}
+
+.parallax-items {
+  overflow: hidden;
+  &__berry {
+    position: absolute;
+    background-image: url("../img/berry.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &.c-1 {
+      top: 250px;
+      left: 100px;
+      width: 170px;
+      height: 174px;
+      filter: blur(3px);
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+    background-image: url("../img/leaf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &.c-2 {
+      bottom: 734px;
+      right: 80px;
+      width: 161px;
+      height: 167px;
+      filter: blur(10px);
+    }
+    &.c-3 {
+      left: 100px;
+      bottom: 430px;
+      width: 108px;
+      height: 112px;
+      filter: blur(10px);
+    }
+  }
+}
+
+@media (max-width: 839px) {
+  .catallog-content {
+    gap: 40px;
+    &__title {
+      font-size: 40px;
+    }
+    &__items {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+  .catallog-item {
+    &__description {
+      max-width: none;
+    }
+    &__button {
+      max-width: none;
+    }
+    &__content {
+      padding: 50px 20px;
+    }
+  } 
+}
+
+@media (max-width: 571px) {
+  .catallog-content {
+    &__items {
+      grid-template-columns: repeat(1, auto);
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  .catallog-item__content {
+    padding: 50px 45px;
+  }
+}
+
+@media (max-width: 415px) {
+  .catallog-item__content {
+    padding: 30px 0;
+  }
+  .catallog-content__title {
+    font-size: 26px;
+    line-height: 40px;
+  }
+} 

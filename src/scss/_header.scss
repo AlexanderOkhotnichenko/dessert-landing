@@ -1,0 +1,100 @@
+.header {
+  position: absolute;
+  min-height: 80px;
+  min-width: 100%;
+  z-index: 1000;
+  &__container {
+    padding: 10px 15px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  &__row {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+.title {
+  font-size: 21px;
+  line-height: 30.03px;
+  color: var(--color-1);
+}
+
+.address {
+  display: flex;
+  gap: 15px;
+  & > * {
+    color: var(--color-1);
+  }
+  &__location {
+
+  }
+  &__name {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--color-1);
+    max-width: 120px;
+  }
+}
+
+.connection {
+  display: flex;
+  gap: 15px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  & > * {
+    color: var(--color-1);
+  }
+  &__telephone {
+    font-size: 20px;
+  }
+  &__description {
+    line-height: 19.5px;
+    font-size: 13px;
+  }
+}
+
+.font-400 {
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.font-500 {
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.font-700 {
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+.location {
+  font-size: 19px;
+}
+
+.phone {
+  font-size: 19px;
+}
+
+@media (max-width: 701px) {
+  .content__row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 461px) {
+  .content {
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+}

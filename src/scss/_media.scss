@@ -1,0 +1,10 @@
+@media (max-width: 839px) {
+  .parallax-item {
+    display: none;
+  }
+  .parallax-items.vis {
+    > * {
+      display: block;
+    }
+  }
+}
